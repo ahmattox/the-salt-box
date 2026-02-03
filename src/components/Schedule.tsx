@@ -47,7 +47,7 @@ export const Schedule: React.FC = () => {
         </div>
 
         <div className={styles.item}>
-          <div className={styles.itemLabel}>Draft #4 & Top 8 Draft</div>
+          <div className={styles.itemLabel}>Draft #4</div>
           <div className={styles.itemTime}>2pm - 6pm</div>
         </div>
 
