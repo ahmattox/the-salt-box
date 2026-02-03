@@ -6,32 +6,17 @@ import type { HeadFC, PageProps } from 'gatsby'
 
 import { Layout } from 'src/components/layout/Layout'
 import { Header } from 'src/components/layout/Header'
-import { Schedule } from 'src/components/Schedule'
-import { Footer } from 'src/components/Footer'
-import { EventDetails } from 'src/components/EventDetails'
-import { FAQ } from 'src/components/FAQ'
+import { CubeList } from 'src/components/CubeList'
 
 const IndexPage: React.FC<PageProps<Queries.HomePageQuery>> = (props) => {
-  // const cubes = [...props.data.allCubesYaml.cubes]
+  const cubes = [...props.data.allCubesYaml.cubes]
 
   return (
     <Layout>
       <div className={styles.container}>
         <Header />
 
-        <div className={styles.mainContent}>
-          <EventDetails />
-
-          <div className={styles.schedule}>
-            <Schedule />
-          </div>
-        </div>
-
-        <div className={styles.secondaryContent}>
-          <FAQ />
-        </div>
-
-        <Footer />
+        <CubeList title="2025 Cubes" cubes={cubes} />
       </div>
     </Layout>
   )
@@ -57,10 +42,7 @@ export default IndexPage
 export const Head: HeadFC = () => {
   return (
     <>
-      <title>
-        The Salt Box - A Two-Day Magic: The Gathering Cube Event in Baltimore,
-        MD
-      </title>
+      <title>2025 Cubes - The Salt Box</title>
 
       <meta
         property="og:image"
@@ -70,15 +52,6 @@ export const Head: HeadFC = () => {
       <meta property="og:image-height" content="630" />
 
       <meta property="og:title" content="The Salt Box" />
-
-      <meta
-        name="description"
-        content="A Two-Day Magic: The Gathering Cube Event in Baltimore, MD"
-      />
-      <meta
-        property="og:description"
-        content="A Two-Day Magic: The Gathering Cube Event in Baltimore, MD"
-      />
 
       <meta name="twitter:card" content="summary_large_image" />
     </>

@@ -28,15 +28,7 @@ export const Schedule: React.FC = () => {
 
         <div className={styles.item}>
           <div className={styles.itemLabel}>Casual Bonus Round</div>
-          <div className={styles.itemTime}>
-            Location:{' '}
-            <a href="https://www.nolandbaltimore.com">No Land Beyond</a>
-          </div>
-          <div className={styles.itemTime}>
-            <a href="https://www.google.com/maps/place/2125+Maryland+Ave,+Baltimore,+MD+21218/data=!4m2!3m1!1s0x89c804e9ff4cd49f:0x4a6a63b42175aa26?sa=X&ved=1t:242&ictx=111">
-              2125 Maryland Avenue
-            </a>
-          </div>
+          <div className={styles.itemTime}>Location TBD</div>
           <div className={styles.itemTime}>~7:30pm onward</div>
         </div>
       </div>

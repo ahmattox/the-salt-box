@@ -4,9 +4,14 @@ import * as React from 'react'
 
 import * as Typography from 'src/components/general/Typography'
 
-type EventState = 'ticket-sales' | 'sold-out' | 'in-progress' | 'concluded'
+type EventState =
+  | 'ticket-sales'
+  | 'sold-out'
+  | 'in-progress'
+  | 'concluded'
+  | 'pre-sale'
 
-const eventState: EventState = 'concluded'
+const eventState = 'pre-sale' as EventState
 
 export const EventDetails: React.FC = () => {
   return (
@@ -48,11 +53,22 @@ export const EventDetails: React.FC = () => {
             </a>
             <p className={styles.ticketNote}>72 Total Seats Available</p>
           </>
+        ) : eventState === 'pre-sale' ? (
+          <div>
+            <p>Tickets available soon</p>
+          </div>
         ) : null}
       </div>
 
       <a href="https://discord.gg/eQgEnpQgeb" className={styles.largeButton}>
         Join the Discord Server
+      </a>
+
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSc11eHn_OJMxUy23z_cuqpnSYEygF5iYn3e375VMB04TQ6aZw/viewform"
+        className={styles.largeButton}
+      >
+        Submit Your Cube
       </a>
 
       <hr className={styles.rule} />

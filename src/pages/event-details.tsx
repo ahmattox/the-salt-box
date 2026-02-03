@@ -96,7 +96,7 @@ export const Head: HeadFC = () => {
 
       <meta
         property="og:image"
-        content="http://thesaltbox.fun/the-salt-box-og.png"
+        content="http://thesaltbox.fun/the-salt-box-og.jpg"
       />
       <meta property="og:image-width" content="1200" />
       <meta property="og:image-height" content="630" />

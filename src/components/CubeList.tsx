@@ -8,6 +8,7 @@ const cornerWidth = 30
 const cornerHeight = 30
 
 interface Props {
+  title: string
   cubes: {
     name: string | null
     url: string | null
@@ -19,11 +20,11 @@ interface Props {
 }
 
 export const CubeList: React.FC<Props> = (props) => {
-  const { cubes } = props
+  const { title, cubes } = props
 
   return (
     <div className={styles.container}>
-      <Typography.SecondaryHeading>The Cubes</Typography.SecondaryHeading>
+      <Typography.SecondaryHeading>{title}</Typography.SecondaryHeading>
 
       <div className={styles.cubes}>
         {cubes.map((cube) => (
