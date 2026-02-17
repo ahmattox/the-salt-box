@@ -40,6 +40,8 @@
 .ticketNote {
   font-size: 0.9em;
   color: var(--secondary-text-color);
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .largeButton {

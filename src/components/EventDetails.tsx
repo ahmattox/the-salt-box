@@ -11,7 +11,7 @@ type EventState =
   | 'concluded'
   | 'pre-sale'
 
-const eventState = 'pre-sale' as EventState
+const eventState = 'ticket-sales' as EventState
 
 export const EventDetails: React.FC = () => {
   return (
@@ -31,9 +31,9 @@ export const EventDetails: React.FC = () => {
             <div className={styles.soldOutHeading}>Tickets Sold Out</div>
 
             <p>
-              <a href="https://www.eventbrite.com/e/the-salt-box-tickets-1057472070429?aff=oddtdtcreator">
+              {/* <a href="https://www.eventbrite.com/e/the-salt-box-tickets-1057472070429?aff=oddtdtcreator">
                 View Details on EventBrite
-              </a>
+              </a> */}
             </p>
 
             <a
@@ -46,12 +46,25 @@ export const EventDetails: React.FC = () => {
         ) : eventState === 'ticket-sales' ? (
           <>
             <a
-              href="https://www.eventbrite.com/e/the-salt-box-tickets-1057472070429?aff=oddtdtcreator"
+              href="https://buy.stripe.com/3cI00kgqnbpo4VVfHI0Jq03"
               className={styles.buyButton}
             >
               Buy Tickets - $45
             </a>
-            <p className={styles.ticketNote}>72 Total Seats Available</p>
+
+            <a
+              href="https://buy.stripe.com/fZu3cwfmjbpo5ZZ2UW0Jq04"
+              className={styles.largeButton}
+            >
+              Affordable Tickets - $10
+            </a>
+
+            <p className={styles.ticketNote}>
+              Discounted tickets are available here if your financial situation
+              calls for it.
+            </p>
+
+            <p className={styles.ticketNote}>72 Total Seats Available.</p>
           </>
         ) : eventState === 'pre-sale' ? (
           <div>
