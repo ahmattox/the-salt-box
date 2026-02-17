@@ -46,10 +46,10 @@ export const EventDetails: React.FC = () => {
         ) : eventState === 'ticket-sales' ? (
           <>
             <a
-              href="https://buy.stripe.com/3cI00kgqnbpo4VVfHI0Jq03"
+              href="https://buy.stripe.com/8x2aEY8XVctscon0MO0Jq05"
               className={styles.buyButton}
             >
-              Buy Tickets - $45
+              Buy Tickets - $55
             </a>
 
             <a
